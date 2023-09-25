@@ -28,26 +28,27 @@ class FirstScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title : const Text('First Screen'),
-        actions: <Widget>[
-          IconButton(
-              onPressed: (){},
-              icon: const Icon(
-                Icons.search,
-                color: Colors.white,
-              ))
+      ),
+      body:
+      // [Membuat baris]
+      // Row(
+      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //   children: const <Widget>[
+      //     Icon(Icons.share),
+      //     Icon(Icons.thumb_up),
+      //     Icon(Icons.thumb_down)
+      //   ],
+      // )
+      Column(
+        children: const <Widget>[
+          Text(
+            'Sebuah Judul',
+            style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),),
+          Text(
+              'Lorem ipsum dolor sit amet'
+          )
         ],
-        leading: IconButton(
-          icon: const Icon(Icons.menu,color: Colors.white),
-          onPressed: (){},
-        ),
-      ),
-      body: const Center(
-        child: Text("Hello world!"),
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
-        onPressed: () {},
-      ),
+      )
     );
   }
 }
